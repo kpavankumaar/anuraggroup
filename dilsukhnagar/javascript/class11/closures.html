@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>closures</title>
+	<style type="text/css">
+		label{
+			margin-left:20px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p id="info"> </p>
+		<input type="text" name="username"><label>Username</label><br>
+		<input type="text" name="email"><label>email</label><br>
+		<input type="text" name="phonenumber"><label>Phonenumber</label>
+
+	</div>
+	<script type="text/javascript">
+		// function run(){
+		// 	var name = "ravi";
+		// 	return function personalDetails(){
+		// 		console.log(name);
+		// 	}
+		// }
+		// var launch = run();
+		// function calcx(x){
+		// 	return function (y){
+		// 		console.log(x*y);
+		// 	}
+		// }
+		// var calc2 = calcx(2);
+		// var calc5 = calcx(5);
+
+		var divEl = document.getElementsByTagName("div")[0];
+		var inputText = document.getElementsByTagName("input");
+		var para = document.getElementById("info");
+		var userName = document.getElementsByName("username")[0];
+		var eMail =  document.getElementsByName("email")[0];
+		var phoneNumber = document.getElementsByName("phonenumber")[0];
+		// divEl.addEventListener()
+
+		var showInfoContent = [
+			{"id":"username" ,"info":"add Username"},
+			{"id":"email" ,"info":"add email"},
+			{"id":"phonenumber" ,"info":"add Phonenumber"},
+			{"id":"samplecontent" ,"info":"samplecontent"}
+		]
+		function showInfo(i){
+
+			return function(){
+				para.innerText = showInfoContent[i].info;
+			}
+		}
+		for(var i=0 ; i < inputText.length ; i++){
+			inputText[i].onfocus = showInfo(i);
+
+			// inputText[i].onfocus = function(){
+			// 	console.log(i);
+			// 	para.innerText = showInfoContent[i].info;
+			// };
+			
+		}
+		var counter = (function(){
+			var privateCounter = 0;
+			function displayCounter (){
+				console.log(privateCounter);
+			}
+			return {
+				increment: function(){privateCounter  = privateCounter +1},
+				decrement: function(){privateCounter =privateCounter-1},
+				currentVal : displayCounter
+			}
+		})();
+
+	function customerInfo(name){
+		return function(language){
+			console.log(name +' knows ' + language);
+		}
+	}
+	var cust = customerInfo('ravi');
+	(function(name){
+		console.log(name);
+	})('ravi');
+	</script>
+</body>
+</html>
