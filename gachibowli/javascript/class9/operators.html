@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>operators</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function sum(a,b){
+			console.log(this);
+			console.log(a+b);
+
+		}	
+
+		sum(20,30);mul();
+		function mul(a,b){
+			console.log(a*b);
+		}
+		console.log(10 + 200 * 2 / 5 - 10)
+
+		var test = 9 + 10 ;
+
+		
+		var obj = {
+			a : 20
+		}
+		// var obj1 = obj;
+		// obj1.a = 50;
+		// console.log(obj.a);
+
+		var obj1 = Object.create(obj);
+		obj1.a = 50;
+		console.log(obj.a)
+		var table = {
+			color:'white',
+			shape:'rectangle',
+			info:function(){
+				console.log(this);
+				var selfThis = this;
+				console.log(' table color is '+ this.color + ' table shape is ' + this.shape);
+				function run(){
+					console.log(selfThis);
+				}
+				run();
+			}
+		}
+		
+	</script>
+</body>
+</html>

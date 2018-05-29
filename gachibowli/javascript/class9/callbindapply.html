@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>call bind apply</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var carpenter1 = {};
+		var carpenter2 = {};
+		function makesTables (type,shape){
+			this.type = type;
+			this.shape = shape;
+		}
+		makesTables.call(carpenter1,'glass','round');
+		makesTables.apply(carpenter1,['glass','round']);
+		var selectShapeOfTheTable = makesTables.bind(carpenter2,'metal');
+		selectShapeOfTheTable('rectangle');
+		selectShapeOfTheTable('circle');
+	</script>
+</body>
+</html>
+
+

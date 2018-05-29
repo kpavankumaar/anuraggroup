@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html,body,ul,li{
+			padding:0px;
+			margin:0px;
+
+		}
+		ul{
+			width:600px;
+			margin:auto;
+		}
+
+		ul::after,ul::before{
+			content: '';
+			display:block;
+			clear:both;
+
+
+		}
+		ul li{
+			list-style-type: none;
+			float:left;
+		}
+		ul li img{
+			width:200px;
+			height:200px;
+		}
+		div{
+			/*width:100%;
+			height:100%;*/
+			background-color: rgba(81,81,81,0.5);
+			position:absolute;
+			left:30%;
+			top:30%;
+		}
+		div img{
+			position:absolute;
+			left:40%;
+			top:30%;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#"><img src="images/download-1.jpg"></a></li>
+		<li><a href="#"><img src="images/download-2.jpg"></a></li>
+		<li><a href="#"><img src="images/download-3.jpg"></a></li>
+		<li><a href="#"><img src="images/download-4.jpg"></a></li>
+		<li><a href="#"><img src="images/download-5.jpg"></a></li>
+		<li><a href="#"><img src="images/download.jpg"></a></li>
+		
+	</ul>
+	<!-- <div>
+		<img src="images/download.jpg">
+	</div> -->
+	<script type="text/javascript">
+		// when user clicks on img element create a popup
+			// popup - > create div, img ,button 
+				// add attribute to img 
+			// we need to add img to div element
+			// div to body element
+			// create button element to close the pop box 
+				//when user clicks on button then remove the div element 
+
+		var gallery = document.getElementsByTagName('ul')[0];
+		function createPopUp(event){
+			console.log(event)
+			console.log('create popup');
+			var divEl = document.createElement('div');
+			var imgEl = document.createElement('img');
+			var btn = document.createElement('button');
+			btn.innerText = 'close';
+			imgEl.setAttribute('src',event.target.src);
+			divEl.appendChild(imgEl);
+			divEl.appendChild(btn);
+			document.body.appendChild(divEl);
+			btn.onclick = function(){
+				console.log('you have clicked on btn');
+				divEl.parentNode.removeChild(divEl);
+
+			}
+
+
+		}
+		gallery.onclick = createPopUp;
+	</script>
+</body>
+</html>

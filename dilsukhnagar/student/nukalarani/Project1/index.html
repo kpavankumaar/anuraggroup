@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			html,div,h1,h2,h3,h4,h5,h6,p,img,ul,li,ol,pre,table{
+				margin: 0px;
+				padding: 0px;
+			}
+			.main{
+				width: 1440;
+			}
+			/*.header{
+				border:2px;
+				color: solidblack
+			}*/
+			.header div.logo{
+				margin-top: 19px;
+				margin-bottom: 25px;
+				margin-left: 40px;
+				float:left;
+			}
+			.menu ul li{
+				list-style-type: none;
+			}
+			.menu{
+				float:right;
+
+			}
+			ul li{
+				margin:10px;
+				float:left;
+			}
+			.clearfix{
+				clear:both;
+			}
+			.banner{
+
+				background-image: url("images/rectangle-2.png");
+				height: 820px;
+			}
+			.banner p{
+				padding: 596px 145.5px 106px;
+
+				width: 1149px;
+				height: 118px;
+				font-family: AbhayaLibre;
+				font-size: 50px;
+				font-weight: 800px;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: 0.7px;
+				text-align: center;
+				color: #ffffff;		
+			}
+			/*style for content1*/
+			.content1{
+				width: 1000px;
+  				height: 299.5px;
+  				margin:auto;
+  				padding: 80px 220px 50px;
+			}
+			.content1 p{
+				 width: 968px;
+				  height: 108px;
+				  font-family: Alef;
+				  font-size: 40px;
+				  font-weight: normal;
+				  font-style: normal;
+				  font-stretch: normal;
+				  line-height: normal;
+				  letter-spacing: 0.5px;
+				  text-align: center;
+				 color: #84a8a6;
+				  padding: 50px 16px 0px;
+			}
+			/*style for content2*/
+			.content2{
+				padding: 80px 220px 50px;
+			}
+			.content2 p{
+				 padding: 50px 12px 0px;
+				width: 976px;
+	  			height: 108px;
+	  			font-family: Alef;
+	  			font-size: 40px;
+	  			font-weight: normal;
+	  			font-style: normal;
+	  			font-stretch: normal;
+	  			line-height: normal;
+	  			letter-spacing: 0.5px;
+	  			text-align: center;
+	  			color: #fb9e32;
+			}
+			/*style for content3*/
+			.content3 /*div.c3p1,div.c3p2*/{
+
+				margin-top: 148px;
+				/*float:left;*/
+				opacity:0px;
+			}
+			/*style for content4*/
+			.content4 .a{
+				padding: 78px 67px 0px 200px;
+				width: 210px;
+				float:left;
+			}
+			.content4 .a img{
+				margin: auto;
+				padding-left: 75px;
+				padding-right: 75px;
+				width: 60px;
+				height: 60px;
+			}
+			.content4 .a h3{
+				width: 147px;
+				height: 24px;
+				font-family: OpenSans;
+				font-size: 18px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				text-align: center;
+				color: #00ae62;
+				padding: 20px 31px 20px 32px;
+			}
+			.content4 .a p{
+				width: 210px;
+				height: 42px;
+				font-family: OpenSans;
+				font-size: 10px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				text-align: center;
+				color: #4a4a4a;
+			}
+			.content4 .b{
+				width:210px;
+				padding-top: 78px;
+				padding-right: 66px;
+				float: left;
+			}
+			.content4 .b img{
+				margin: auto;
+				padding-left: 75px;
+				padding-right: 75px;
+				width: 60px;
+				height: 60px;
+			}
+			.content4 .b h3{
+				width: 167px;
+				height: 24px;
+				font-family: OpenSans;
+				font-size: 18px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				text-align: center;
+				color: #1b80c3;
+				padding: 16px 21px 21px 22px;
+			}
+			.content4 .b p{
+				width: 210px;
+				height: 42px;
+				font-family: OpenSans;
+				font-size: 10px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				text-align: center;
+				color: #4a4a4a;
+			}
+			.content4 .c{
+				width:210px;
+				padding-top: 78px;
+				padding-right: 67px;
+				float: left;
+			}
+			.content4 .c img{
+				margin: auto;
+				padding-left: 75px;
+				padding-right: 75px;
+				width: 60px;
+				height: 60px;
+			}
+			.content4 .c h3{
+				width: 158px;
+				height: 24px;
+				font-family: OpenSans;
+				font-size: 18px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				text-align: center;
+				color: #f4c714;
+				padding: 20px 26px 21px 26px;
+			}
+			.content4 .c p{
+				width: 210px;
+				height: 42px;
+				font-family: OpenSans;
+				font-size: 10px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				text-align: center;
+				color: #4a4a4a;
+			}
+			.content4 .d{
+				width:210px;
+				padding-top: 78px;
+				padding-right: 200px;
+				float: left;
+			}
+			.content4 .d img{
+				margin: auto;
+				padding-left: 75px;
+				padding-right: 75px;
+				width: 60px;
+				height: 60px;
+			}
+			.content4 .d h3{
+				width: 143px;
+				height: 24px;
+				font-family: OpenSans;
+				font-size: 18px;
+				
+				text-align: center;
+				color: #da3538;
+				padding: 20px 33px 20px 34px;
+			}
+			.content4 .d p{
+				width: 210px;
+				height: 42px;
+				font-family: OpenSans;
+				font-size: 10px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				text-align: center;
+				color: #4a4a4a;
+			}
+			/*style for content5*/
+			.content5 h3{
+				width: 377px;
+				height: 52px;
+				font-family: OpenSans;
+				font-size: 38px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				color: #000000;
+				padding-top: 104px;
+				padding-left: 541px;
+				padding-right: 522px;
+			}
+
+			/*style for content6*/
+			.content6 .c6a{
+				margin: auto;
+				/*width:1274px;*/
+				padding: 80px 80px 0px 80px;
+				float: left;
+			}
+			.content6 .c6a .c6a1{
+				width:425px;
+				float: left;
+			}
+			.content6 .c6a .c6a1 img{
+				width: 60px;
+			    height: 49px;
+			  	padding:60px 187px  65px 178px;
+			}
+			.content6 .c6a .c6a1 p{
+				width: 199px;
+			    height: 34px;
+			    font-family: OpenSans;
+			    font-size: 25px;
+			    font-weight: normal;
+			    font-style: normal;
+			    font-stretch: normal;
+			    line-height: normal;
+			    letter-spacing: normal;
+			    text-align: center;
+			    color: #4a4a4a;
+			    padding: 0px 117px 77px 109px;
+			    /*padding-left: 189px;
+			    padding-right: 117px;
+			    padding-bottom: 77px;
+*/
+
+			}
+			/*.c6a1 p{
+				float:left;
+			}*/
+			.content6 .c6a .c6a2{
+				width:424px;
+				float: left;
+			}
+
+			.content6 .c6a .c6a2 img{
+				width: 60px;
+			    height: 57.1px;
+			    padding:56px 180px 60.9px 184px;
+			    
+			}
+			.content6 .c6a .c6a2 p{
+				width: 166px;
+			    height: 34px;
+			    font-family: OpenSans;
+			    font-size: 25px;
+			    font-weight: normal;
+			    font-style: normal;
+			    font-stretch: normal;
+			    line-height: normal;
+			    letter-spacing: normal;
+			    text-align: center;
+			    color: #4a4a4a;
+			    padding: 0px 118.6px 77px 139.4px;
+
+			}
+			.content6 .c6a .c6a3{
+				width:429px;
+				float: left;
+			}
+			.content6 .c6a .c6a3 img{
+				width: 60px;
+			    height: 55px;
+			    padding: 57px 185px 62px 184px;
+			}
+			.content6 .c6a .c6a3 p{
+		     	width: 153px;
+			    height: 34px
+			    font-family: OpenSans;
+			    font-size: 25px;
+			    font-weight: normal;
+			    font-style: normal;
+			    font-stretch: normal;
+			    line-height: normal;
+			    letter-spacing: normal;
+			    text-align: center;
+			    color: #4a4a4a;
+			    padding: 0px 138.1px 77px 137.9px;
+			}
+
+			.content6 .c6b{
+				margin: auto;
+				/*width:1274px;*/
+				padding: 0px 80px 121px 80px;
+				float: left;
+			}
+			.content6 .c6b .c6b1{
+				width:425px;
+				float: left;
+			}
+			.content6 .c6b .c6b1 img{
+				width: 60px;
+				height: 60px;
+				padding: 54px 186px 59px 179px;
+			}
+			.content6 .c6b .c6b1 p{
+				width: 276px;
+				height: 34px;
+				font-family: OpenSans;
+				font-size: 25px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				text-align: center;
+				color: #4a4a4a;
+				padding: 0px 78.1px 68px 70.9px;
+			}
+			.content6 .c6b .c6b2{
+				width:425px;
+				float: left;
+			}
+			.content6 .c6b .c6b2 img{
+				width: 59.9px;
+				height: 60px;
+				padding: 54px 182.1px 59px 182px;
+			}
+			.content6 .c6b .c6b2 p{
+				width: 276px;
+				height: 34px;
+				font-family: OpenSans;
+				font-size: 25px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				text-align: center;
+				color: #4a4a4a;
+				padding: 0px 79.6px 68px 68.4px;
+			}
+			.content6 .c6b .c6b3{
+				width:425px;
+				float: left;
+			}
+			.content6 .c6b .c6b3 img{
+				width: 60px;
+				height: 60px;
+				padding: 54px 185px 59px 184px;
+			}
+			.content6 .c6b .c6b3 p{
+				width: 295px;
+				height: 34px;
+				font-family: OpenSans;
+				font-size: 25px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				text-align: center;
+				color: #4a4a4a;
+				padding: 0px 67.1px 68px 66.9px;
+			}
+			.line-separator{
+				width: 1px;
+				height: 563px;
+				border: solid 1px #e5e5e5;
+			}
+			.footer{
+				width: 1440px;
+			    /*height: 200px;*/
+			    background-image: linear-gradient(254deg, #20cd5d, #11bc4e);
+			}
+			.footer .logo1 h3{
+				width: 147px;
+			    height: 29px;
+			    font-family: ArchivoBlack;
+			    font-size: 22px;
+			    font-weight: normal;
+			    font-style: normal;
+			    font-stretch: normal;
+			    line-height: normal;
+			    letter-spacing: 0.3px;
+			    color: #ffffff;
+			    padding: 138px 1253px 0px 40px ;
+			    float:left;
+			}
+			.footer .menu ul li{
+				width: 57px;
+				
+				opacity: 0.9;
+				font-family: SourceSansPro;
+				font-size: 16px;
+				font-weight: 600;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				color: #ffffff;
+				
+			}
+			.footer .menu{
+				float: right;
+			}
+			.header{
+				border:2px solid black;
+			}
+			.content3{
+				font-size: 32px;
+			}
+			.content3 > div{
+				float:left;	
+			}
+			/*.content3 > div:nth-child(2n+1){
+				background-color: red;
+				padding:29px 0px;
+			}
+			.content3 div:nth-child(2){
+				padding-top: 10px;
+			}*/
+			.content3 p:first-child{
+				padding:29px 0px;
+				float:left;
+			}
+			.content3 p:last-of-type{
+				padding:29px 0px;
+				float:left;	
+			}
+			.content3 img:first-of-type{
+				float:left;
+				padding:10px 0px;
+			}
+			.content3 img:last-child{
+				float:left;
+			}
+
+			.header::after, .header::before,.content3::after, .content3::before{
+				content:'';
+				display: block;
+				clear:both;
+				/*width:50px;
+				height:50px;
+				background-color: red;*/
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="header">
+				<div class="logo">
+					<img src="images\education-website.png">
+				</div>
+				<div class="menu">	
+					<ul>
+						<li><a href="#">Education</a></li>
+						<li><a href="#">Innovation</a></li>
+						<li><a href="#">Incubation</a></li>
+					</ul>
+				</div>
+				<!-- <div class="clearfix">
+				</div> -->
+			</div>
+			<!-- end of the header -->
+
+			<div class="banner">
+					<p>Education is the passport to the future, for tomorrow belongs to those who prepare for it today.</p>
+			</div>
+			<!-- end of the banner -->
+
+			<div class="content1">
+				<img src="images\content1.png">
+				<p>Imagine what you could learn today...<br>Begin your adventure by browsing our explorations.</p>
+			</div>
+			<!-- end of the content1 -->
+
+			<div class="content2">
+				<img src="images\content2.png">
+				<p>Empowering millions of students in making the right career and college decision</p>
+			</div>
+			<!-- end of content2 -->
+
+			<div class="content3">
+				<p>WHY EVERYONE </p>	
+				<img src="images\love.png">
+				<p>THIS</p>
+				<img src="images\digitallync.png">
+			</div>
+			<!-- end of content3 -->
+
+			<div class="content4">
+
+				<div class="a">
+					<!-- <div> -->
+					<img src="images\content4-1.png">	
+					<!-- </div>
+
+					<div class="c4ah1"> -->
+						<h3>The Best Trainers</h3>
+					<!-- </div>
+
+					<div class="c4ap1">	 -->
+						<p>Our developers are our trainers! our trainers spend half of their time on products at our innovation center.</p>
+					<!-- </div> -->
+				</div>
+
+				<div class="b">
+					<!-- <div class="c4bimg1"> -->
+						<img src="images\content4-2.png">
+					<!-- </div>
+					<div class="c4bh1"> -->
+						<h3>Classroom & Online</h3>
+					<!-- </div>
+					<div class="c4bp1"> -->
+						<p>Our online experiance is as good as our in class experiance. Our programs offer end to personal interaction with students.</p>
+					<!-- </div> -->
+				</div>
+				<div class="c">
+					<!-- <div class="c4cimg1"> -->
+						<img src="images\content4-3.png">
+					<!-- </div>
+					<div class="c4ch1"> -->
+						<h3>We are Committed</h3>
+					<!-- </div>
+					<div class="c4cp1"> -->
+						<p>We consider your success to be ours. Your achivement is our commitment. We teach until you learn.</p>
+					<!-- </div> -->
+				</div>
+				<div class="d">
+					<!-- <div class="c4dimg1"> -->
+						<img src="images\content4-4.png">
+					<!-- </div>
+					<div class="c4dh1"> -->
+						<h3>Really Affordable</h3>
+					<!-- </div>
+					<div class="c4dp1"> -->
+						<p>We believe in a collaborative, cool and learn friendly environment. Our promise, is to provide all this for no additional charge.</p>
+					<!-- </div> -->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!-- end of content4 -->
+
+			<div class="content5">
+				<h3>How are we Different</h3>
+			</div>
+			<!-- end of content5 -->
+
+			<div class="content6">
+				<div class="c6a">
+					<div class="c6a1">
+						<img src="images\content6a-1.png">
+						<p>1 to 1 Interaction</p>
+						<!-- <div class="c6a1img1">	
+						</div>
+						<div class="c6a1p1">
+						</div> -->
+					</div>
+					<!-- <div class="line-separator"></div> -->
+					<div class="c6a2">
+						<img src="images\content6a-2.png">
+						<p>Trainers 150 +</p>
+						<!-- <div class="c6a2img1">	
+						</div>
+						<div class="c6a2p1">
+						</div> -->
+					</div>
+					<!-- <div class="line-separator"></div> -->
+					<div class="c6a3">
+						<img src="images\content6a-3.png">
+						<p>24/7 Support</p>
+						<!-- <div class="c6a3img1">	
+						</div>
+						<div class="c6a3p1">
+						</div> -->
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!-- end of content6 a -->
+
+				<div class="c6b">
+					<div class="c6b1">
+						<img src="images\content6b-1.png">
+						<p>International Standards</p>
+						<!-- <div class="c6b1img1">	
+						</div>
+						<div class="c6b1p1">
+						</div> -->
+					</div>
+
+					<div class="c6b2">
+						<img src="images\content6b-2.png">
+						<p>Corporate Environment</p>
+						<!-- <div class="c6b2img1">	
+						</div>
+						<div class="c6b2p1">
+						</div> -->
+					</div>
+
+					<div class="c6b3">
+						<img src="images\content6b-3.png">
+						<p>Great Tech Infrastructure</p>
+						<!-- <div class="c6b3img1">	
+						</div>
+						<div class="c6b3p1">
+						</div> -->
+					</div>
+					<!-- <div class="line-separator"></div> -->
+					<div class="clearfix"></div>
+				</div>
+				<!-- end of content6 b -->
+
+				<div class="clearfix"></div>
+				
+			</div>
+			<!-- end of content6 -->
+
+			<div class="footer">
+				<div class="logo1">
+					<h3>Digital Lync</h3>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Privacy</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!-- end of footer -->
+
+		</div>
+		<!-- end of main -->
+
+	</body>
+</html>

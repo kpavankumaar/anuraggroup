@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html,body,ul,li{
+			padding:0px;
+			margin:0px;
+
+		}
+		ul{
+			width:600px;
+			margin:auto;
+		}
+
+		ul::after,ul::before{
+			content: '';
+			display:block;
+			clear:both;
+
+
+		}
+		ul li{
+			list-style-type: none;
+			float:left;
+		}
+		ul li img{
+			width:200px;
+			height:200px;
+		}
+		div{
+			width:100%;
+			height:100%;
+			background-color: rgba(81,81,81,0.5);
+			position:absolute;
+			left:0px;
+			top:0px;
+		}
+		div img{
+			position:absolute;
+			left:40%;
+			top:30%;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#"><img src="images/download-1.jpg"></a></li>
+		<li><a href="#"><img src="images/download-2.jpg"></a></li>
+		<li><a href="#"><img src="images/download-3.jpg"></a></li>
+		<li><a href="#"><img src="images/download-4.jpg"></a></li>
+		<li><a href="#"><img src="images/download-5.jpg"></a></li>
+		<li><a href="#"><img src="images/download.jpg"></a></li>
+		
+	</ul>
+	<!-- <div>
+		<img src="images/download.jpg">
+	</div> -->
+	<script type="text/javascript">
+
+		var friends = ['Ravi','Ramesh','srikanth','sneha']
+		friends.push('suresh')
+
+		console.log(friends);
+		// var laptop = {
+		// 	color:'white',
+		// 	brand:'Apple',
+		// 	app:function(){
+		// 		console.log('can help create information')
+		// 	}
+		// };
+		// console.log(laptop.color);
+		// laptop.app();
+		// var gallery = document.getElementsByTagName('ul')[0];
+		// var liEl = document.getElementsByTagName('li');
+		// function galleryCallBackFn(event){
+		// 	console.log(event);
+
+		// 	console.log('you clicked on ul element');
+
+		// }
+		// function liElCallBackFn(){
+		// 	console.log('you clicked on li element');
+		// }
+		// gallery.addEventListener('click',galleryCallBackFn,true)
+		// gallery.onclick = function(){
+		// 	alert('you clicked on ul element')
+		// };
+		// console.log(liEl[0]);
+		// for(var i= 0; i< 6; i++){
+		// 	liEl[i].addEventListener('click',liElCallBackFn,true);
+		// 	// liEl[i].onclick = function(){
+		// 	// alert('you clicked on li element');
+		// 	// }
+		// }
+
+		var gallery = document.getElementsByTagName('ul')[0];
+		function createPopUp(event){
+			console.log(event)
+			console.log('create popup');
+			var divEl = document.createElement('div');
+			var imgEl = document.createElement('img');
+			imgEl.setAttribute('src',event.target.src);
+			divEl.appendChild(imgEl);
+			document.body.appendChild(divEl);
+		}
+		gallery.onclick = createPopUp;
+	</script>
+</body>
+</html>

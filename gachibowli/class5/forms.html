@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>forms</title>
+</head>
+<body>
+	<form>
+		<fieldset><legend align=right>User Information	</legend>
+			<label>Username</label> <input type="text" name="username" placeholder="username"><br>
+			<label>Password</label> <input type="password" name="password" placeholder="password"><br>
+			<label>Male</label> <input type="radio" name="gender">
+			<label>Female</label> <input type="radio" name="gender">
+			<br>
+			<h3>Courses</h3>
+			<input type="checkbox" name="Courses"><label>HTML</label>
+			<input type="checkbox" name="Courses"><label>CSS</label>
+			<input type="checkbox" name="Courses"><label>Javascript</label>
+			<select>
+				<optgroup label="FrontEnd Development">
+					<option>HTML</option>
+					<option>CSS</option>
+					<option selected>Javascript</option>
+					<option>Bootstrap</option>
+					<option>Typescript</option>
+					<option>Angular </option>
+				</optgroup>
+				<option>node js</option>
+				<option>Expressjs</option>
+				<option>Mongodb</option>
+			</select><br>
+			<textarea cols="40" rows="5"></textarea><br>
+			<input type="submit" value="signin">
+		</fieldset>
+	</form>
+</body>
+</html>

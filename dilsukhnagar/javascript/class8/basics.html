@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// console.log(this);
+		// function run(){
+		// 	console.log(this);
+		// }
+		// run();
+		var obj = {
+			name:'ravi',
+			age:25,
+			prop:function(){
+				var selfThis = this;
+				console.log('name is '+this.name +' and  age is ' + this.age);
+				function test(){
+					console.log(selfThis);
+				}
+				test();
+			}
+		}
+		obj.prop();
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Constructor</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Stationary(item1,item2,item3){
+			console.log(this);
+			this.item1 = item1;
+			this.item2 = item2;
+			this.item3 = item3;
+		}
+		Stationary.prototype.stationaryOrderInfo = function(){
+			console.log(this.item1 + ' ' +this.item2 + ' ' + this.item3);
+		}
+
+		function ProcessOrder(item1,item2,item3){
+			console.log(this);
+			// this.stationary = item1;
+			Stationary.apply(this,item1);
+			this.groceries = item2;
+			this.clothes = item3;
+		
+		}
+		ProcessOrder.prototype = Object.create(Stationary.prototype);
+		ProcessOrder.prototype.orderInfo = function(){
+				console.log(this.groceries + ' ' +this.clothes + ' ' + this.item1 +' ' +this.item2 + ' ' + this.item3 );
+			}
+		ProcessOrder.prototype.constructor = ProcessOrder;
+		var order1 = new ProcessOrder(['stationary-pen','stationary-book','stationary-scale'],'groceries','clothes');
+
+		var order2 = new ProcessOrder(['stationary-book']);
+		order2.orderInfo = function(){
+			console.log(this.item1);
+		}
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

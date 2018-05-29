@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var carpenter1 = {};
+		var carpenter2 = {};
+		var carpenter3 = {};
+		function makeTables(type,shape){
+			this.type = type;
+			this.shape = shape;
+		}
+		makeTables.call(carpenter1,'wood','round');
+		makeTables.apply(carpenter2,['wood','square']);
+		var shapeOfTable = makeTables.bind(carpenter3,'metal');
+		shapeOfTable('rectangle');
+		shapeOfTable('square');
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
