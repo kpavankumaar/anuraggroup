@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var xhr = new XMLHttpRequest();
+		var response;
+		console.log('UNSENT', xhr.readyState); // readyState will be 0
+		var url ='https://jsonplaceholder.typicode.com/posts';
+		
+
+		xhr.open('GET',url,true);
+		console.log('OPENED', xhr.readyState); // readyState will be 1
+		
+		xhr.onreadystatechange = function(){
+			if (xhr.readyState == 4) {
+				if(xhr.status == 200){
+					response = xhr.response;
+					console.log(parse(xhr.response));
+					console.log(xhr.responseXML);
+					if(xhr.response){
+
+						// var newArr = xhr.response.map(function(events){
+						// 	return events.id
+						// })	
+					}
+				}
+			}
+		};
+		xhr.onprogress = function () {
+		    console.log('LOADING', xhr.readyState); // readyState will be 3
+		};
+
+		xhr.onload = function () {
+		    console.log('DONE', xhr.readyState); // readyState will be 4
+		};
+
+		xhr.send();
+
+		
+
+	</script>
+</body>
+</html>
