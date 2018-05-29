@@ -64,8 +64,23 @@
 			// append div to body element
 			var divEl = document.createElement('div');
 			var imgEl = document.createElement('img');
+			var btn = document.createElement('button');
+			btn.innerText = 'close';
+			btn.style.position = 'absolute';
+			btn.style.top= '0px';
+			btn.style.right = '0px';
 			imgEl.setAttribute('src',e.target.src);
+			btn.onclick = function(){
+				var divEl = this.parentNode;
+				var divElParent = divEl.parentNode;
+				divElParent.removeChild(divEl);
+			}
+
+
+
+			divEl.appendChild(btn);
 			divEl.appendChild(imgEl);
+
 			document.body.appendChild(divEl);
 		}
 		
