@@ -6,7 +6,6 @@
 <body>
 	<script type="text/javascript">
 		var xhr = new XMLHttpRequest();
-		var response;
 		console.log('UNSENT', xhr.readyState); // readyState will be 0
 		var url ='https://jsonplaceholder.typicode.com/posts';
 		
@@ -18,14 +17,8 @@
 			if (xhr.readyState == 4) {
 				if(xhr.status == 200){
 					response = xhr.response;
-					console.log(parse(xhr.response));
+					console.log(xhr.response);
 					console.log(xhr.responseXML);
-					if(xhr.response){
-
-						// var newArr = xhr.response.map(function(events){
-						// 	return events.id
-						// })	
-					}
 				}
 			}
 		};
@@ -37,7 +30,7 @@
 		    console.log('DONE', xhr.readyState); // readyState will be 4
 		};
 
-		xhr.send();
+		xhr.send();// readystate will be 2 
 
 		
 
