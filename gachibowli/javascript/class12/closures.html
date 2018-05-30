@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		window.onload = function(){
+		(function(obj){
+			console.log('IIFE');
+			console.log(obj.name)
+		var divEl = document.getElementsByTagName("div")[0];
+		console.log(divEl);
+		var inputText = document.getElementsByTagName("input");
+		var para = document.getElementById("info");
+		var userName = document.getElementsByName("username")[0];
+		var eMail =  document.getElementsByName("email")[0];
+		var phoneNumber = document.getElementsByName("phonenumber")[0];
+		var data =  [
+				{"id":"username" ,"info":"add username"},
+				{"id":"email" ,"info":"add email"},
+				{"id":"phonenumber" ,"info":"add Phonenumber"},
+				{"id":"samplecontent" ,"info":"samplecontent"}
+			];
+			function showInfo(i){
+				return function(){
+					para.innerText = data[i].info;
+				}
+			}
+			for(var i=0 ; i < inputText.length ; i++){
+				inputText[i].onfocus = showInfo(i);
+
+				// inputText[i].onfocus = function(){
+				// 	console.log(i);
+				// 	para.innerText = data[i].info;
+				// };
+				
+			}
+		})({
+			name:'srk'
+		})
+
+
+
+		function customerInfo(name){
+			console.log(name);
+			return function(language){
+				console.log(name + ' knows '+  language);
+			}
+		}
+		var customerDetails = customerInfo('ravi');
+		// console.log();
+		customerDetails('english');
+		}
+	</script>
+	<script src="sample.js"></script>
+</head>
+<body>
+	<div>
+		<p id="info"> </p>
+		<input type="text" name="username"><label>Username</label><br>
+		<input type="text" name="email"><label>email</label><br>
+		<input type="text" name="phonenumber"><label>Phonenumber</label>
+	</div>
+	
+
+</body>
+</html>
