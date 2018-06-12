@@ -1,0 +1,32 @@
+<div class="container">
+  <app-nav-bar></app-nav-bar>
+  <app-list-item [studentInfo1] = 'studentInfo'></app-list-item>
+  <!-- <div class="row">
+    <div class="col well" *ngFor = 'let student of studentInfo'>
+      <label>Name: </label> {{student.name}}<br>
+      <label>Email: </label> {{student.email}}
+      <br>
+    </div>
+  </div> -->
+</div>
+<!-- <div>
+  <h1>{{title}}</h1>
+  <p>user lives in {{content}}</p>
+  <input type=text name='username' [value]='name'>
+  <input type=text name='username' (input)='name = $event.target.value' [value]='name'>
+  <input type=text name='username' (blur)='name = $event.target.value' [value]='name'>
+  <br>
+  <input type=text name='username' (keyup.enter)='name = $event.target.value' [value]='name'>
+  <br>
+  <input type=text #nameinfo (keyup)='name = nameinfo.value' [value]='name'>
+  <input type=text [(ngModel)]='name'>
+  <p>{{name}}</p>
+  <img src="../favicon.ico">
+  <img src={{url}}>
+  <img [src]='url'>
+  <select (change) = 'regionInfo($event.target.value)'>
+    <option *ngFor='let region of regions'>{{region}}</option>
+  </select>
+  <button (click)='changeColor()'>Toggle color</button>
+  <p [style.color]='color'> Text color </p>
+</div> -->

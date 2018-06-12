@@ -8,10 +8,10 @@
 		}
 	</style>
 	<script type="text/javascript">
-		window.onload = function(){
-			var para = document.getElementById('info');
-			console.log(para);	
-		}
+		// window.onload = function(){
+		// 	var para = document.getElementById('info');
+		// 	console.log(para);	
+		// }
 		
 	</script>
 </head>
@@ -55,18 +55,18 @@
 			{"id":"samplecontent" ,"info":"samplecontent"}
 		]
 		function showInfo(i){
-
 			return function(){
 				para.innerText = showInfoContent[i].info;
 			}
 		}
-		for(var i=0 ; i < inputText.length ; i++){
-			inputText[i].onfocus = showInfo(i);
+		for(let i=0 ; i < inputText.length ; i++){
+			// inputText[i].onfocus = showInfo(i);
 
-			// inputText[i].onfocus = function(){
-			// 	console.log(i);
-			// 	para.innerText = showInfoContent[i].info;
-			// };
+			inputText[i].onfocus = function(){
+				console.log(i);
+				
+				para.innerHTML	 = showInfoContent[i].info;
+			};
 			
 		}
 		var counter = (function(){
@@ -91,6 +91,6 @@
 		console.log(name);
 	})('ravi');
 	</script>
-	<script src="closure.js"></script>
+	<!-- <script src="closure.js"></script> -->
 </body>
 </html>
