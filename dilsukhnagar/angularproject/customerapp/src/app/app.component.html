@@ -1,6 +1,7 @@
 <div class="container">
   <app-nav-bar></app-nav-bar>
-  <app-list-item [studentInfo1] = 'studentInfo'></app-list-item>
+  <!-- <app-list-item [studentInfo1] = 'studentInfo' (studentList) = 'newInputVal($event)'></app-list-item> -->
+  <router-outlet></router-outlet>
   <!-- <div class="row">
     <div class="col well" *ngFor = 'let student of studentInfo'>
       <label>Name: </label> {{student.name}}<br>
