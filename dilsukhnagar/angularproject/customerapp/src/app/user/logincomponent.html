@@ -1,0 +1,59 @@
+<div class = 'container'>
+    <form #loginForm = 'ngForm' (ngSubmit)="login(loginForm.value)" >
+        <div class="form-group">
+            <label for="exampleInputEmail1">User Name</label>
+            <em  *ngIf = 'loginForm.controls.username?.invalid && loginForm.controls.username?.touched' class = 'float-right'>Required</em>
+            <input type="text" required  (ngModel) = 'username' name = 'username' class="form-control"  placeholder="username">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <em *ngIf='loginForm.controls.password?.invalid && loginForm.controls.password?.touched' class='float-right'>Required</em>
+            <input type="password" required (ngModel)='password' name = 'password' class= "form-control" placeholder="Password">
+        </div>
+
+        <button type="submit" [disabled]='loginForm.invalid' class="btn btn-primary">Login</button>
+        <button type="button" class="btn btn-primary">Cancel</button>
+        <div class="row">
+        
+            <div class="col-xs-3 mr">
+                <div> loginForm.valid: </div>
+                <div> loginForm.invalid : </div>
+                <div> loginForm.dirty : </div>
+                <div> loginForm.pristine : </div>
+                <div> loginForm.submitted: </div>
+                <div> loginForm.touched: </div>
+                <div> loginForm.untouched: </div>
+            </div>
+            <div class="col-xs-4">
+                <div>{{ loginForm.valid }}</div>
+                <div>{{loginForm.invalid}}</div>
+                <div>{{loginForm.dirty}}</div>
+                <div>{{loginForm.pristine}}</div>
+                <div>{{loginForm.submitted}}</div>
+                <div>{{loginForm.touched}}</div>
+                <div>{{loginForm.untouched}}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5">
+                <div>userName?.valid:</div>
+                <div>userName?.invalid:</div>
+                <div>userName?.dirty:</div>
+                <div>userName?.pristine:</div>
+                <div>userName?.submitted:</div>
+                <div>userName?.touched:</div>
+                <div>userName?.untouched:</div>
+            </div>
+            <div class="col-xs-2">
+                <div>{{loginForm.controls.username?.valid}}</div>
+                <div>{{loginForm.controls.username?.invalid}}</div>
+                <div>{{loginForm.controls.username?.dirty}}</div>
+                <div>{{loginForm.controls.username?.pristine}}</div>
+                <div>{{loginForm.controls.username?.submitted}}</div>
+                <div>{{loginForm.controls.username?.touched}}</div>
+                <div>{{loginForm.controls.username?.untouched}}</div>
+                
+            </div>
+        </div>
+    </form>
+</div>
